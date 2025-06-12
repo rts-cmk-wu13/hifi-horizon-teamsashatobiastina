@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+
+@font-face {
+    font-family: "OpenSans-italic";
+    src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf");
+    font-style: italic;
+}
+
+
+
+:root {
+/* - - - - - - - - - color - - - - - - - - -  */
+
+/* - - - - - stock color - - - - -  */
+--in-stock-color: #008000;
+--few-in-stock-color: #FFA500;
+--out-of-stock-color: #FF0000;
+
+/* - - - - - background color - - - - -  */
+--background-color: #FFFFFF;
+--black-background-color: #000000;
+
+/* - - - - - grey color - - - - -  */
+--box-shadow-color: #F4F4F2;
+--categories-color: #E8E8E8;
+--header-titles: #BBBFCA;
+--checkout-selector-color: #495464;
+
+/* - - - - - button color - - - - -  */
+--orange-button-color: #FF6900;
+
+/* - - - - - - - - - font sizes - - - - - - - - -  */
+--nav-font-size: 1.125rem;
+--button-font-size: 1.14rem;
+--search-font-size: 1.3rem;
+
+/* - - - - -  bold- - - - - */
+--text-bold: bold;
+
+/* - - - - - - - - - box shadow - - - - - - - - -  */
+
+--box-shadow-checkout: 2px 4px 24px -8px rgba(0,0,0,0.75);
+--box-shadow-checkout-hover: 4px 4px 28px -4px rgba(0,0,0,0.75);
+}
+
+
+
+@media (max-width: 1024px) {
+  .checkout-container {
+    padding: 1.5rem;
+    border-radius: 6px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .checkout-container {
+    padding: 1rem;
+    border-radius: 4px;
+  }
+}
