@@ -1,6 +1,6 @@
 import './index.css'
 
-function App() {
+function Layout() {
 
 
   return (
@@ -12,4 +12,4 @@ function App() {
   )
 }
 
-export default App
+export default Layout
