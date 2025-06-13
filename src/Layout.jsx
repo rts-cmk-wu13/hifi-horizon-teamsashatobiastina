@@ -3,7 +3,6 @@ import Header from './components/header';
 import './index.css'
 // import Header from './components/Header.jsx'
 // import Footer from './components/Footer.jsx'
-import Test from './pages/Test';
 import { Outlet } from 'react-router';  
 
 
@@ -15,7 +14,6 @@ function Layout() {
 <Header />
 <main>
   <Outlet />
-  <Test />
 </main>
 <Footer />
 
