@@ -9,22 +9,22 @@ import { FaCcVisa } from "react-icons/fa";
 import { FaCcStripe } from "react-icons/fa";
 import { FaCcMastercard } from "react-icons/fa";
 
-export default function footer() {
+export default function Footer() {
 
     return (
         <>
         <div className='footer__nav'>
         <ul>
-            <li>Home</li>
-            <li>Shop</li>
-            <li>About Us</li>
+            <li><NavLink to='/'>Home</NavLink></li>
+            <li> Shop</li>
+            <li><NavLink to='/about'>About Us</NavLink></li>
         </ul>
 
         <ul>
-            <li>Returns & Refunds</li>
-            <li>Delivery</li>
-            <li>Privacy Policy</li>
-            <li>Terms & Conditions</li>
+            <li><NavLink to='/faq'> Returns & Refunds</NavLink></li>
+            <li><NavLink to='/faq'>Delivery</NavLink></li>
+            <li><NavLink to='/faq'>Privacy Policy</NavLink></li>
+            <li><NavLink to='/faq'>Terms & Conditions</NavLink></li>
         </ul>
 
         <div>
@@ -51,7 +51,7 @@ export default function footer() {
             <li><FaCcMastercard /></li>
         </ul>
         <p>HiFi Horizon (Edinburgh) Ltd is registered in Scotland. No: SC049298. Registered office: 2 Joppa Rd, Edinburgh EH15 2EU</p>
-        <p>Designed by WU07 :)</p>
+        <p>Designed by WU07 </p>
         </div>
 
 
