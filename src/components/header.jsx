@@ -1,3 +1,6 @@
+//import {  } from 'react-icons/fa6';
+import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
+
 export default function Header(){
 
 return(
@@ -14,11 +17,11 @@ return(
     <form action="./search/">
       <label for="product">Search a product  <FaSearch /></label>
       <input type="search" id="product" name="q" />
-      <button type="submit">Search</button>
+
     </form>
 </search>
-<img src="<FaUser />" alt="" />
-<img src="<FaCartShopping />" alt="" />
+<FaUser />
+<FaShoppingCart />
 </nav>
 
 </>
