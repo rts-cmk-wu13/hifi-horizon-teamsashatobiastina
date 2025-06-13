@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router";
 import Layout from "./Layout";
 
-
-import Test from '../pages/Test.jsx'
+import Home from "./pages/Home.jsx";
+import Test from './pages/Test.jsx';
 
 // import Header from './components/header.jsx'
 // import Home from './pages/Home.jsx'
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
             Element: <Home />
           },
           {
-            path: '/test',
+            path: "/test",
             element: <Test />,
           },
         ]
