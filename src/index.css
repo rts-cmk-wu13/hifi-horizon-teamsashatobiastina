@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
 
 @font-face {
     font-family: "OpenSans";
@@ -20,7 +12,6 @@
     src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf");
     font-style: italic;
 }
-
 
 
 :root {
