@@ -1,4 +1,4 @@
-export default function Button({ text, bgColor = 'Black' }) {
+export default function Button({ text}) {
   return (
     <button className={` px-4 py-2 m-5 rounded bg-BtnOrange text-white`}>
       {text}

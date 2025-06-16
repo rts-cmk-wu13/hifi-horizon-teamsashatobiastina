@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import ProductArticle from "../components/ProductArticle";
-import Button from "../components/button"
+import Button from "../components/button"; 
 export default function Home() {
 
     return (
@@ -9,13 +9,13 @@ export default function Home() {
 
             <section className="PopularProducts">
                 <h2>Popular Products</h2>
-                <Button />
+                <Button text="see all products" className="bg-BtnOrange"/>
 
 
-                <ProductArticle></ProductArticle>
-                <ProductArticle></ProductArticle>
-                <ProductArticle></ProductArticle>
-                <ProductArticle></ProductArticle>
+                <ProductArticle text="Read More"></ProductArticle>
+                <ProductArticle text="Read More"></ProductArticle>
+                <ProductArticle text="Read More"></ProductArticle>
+                <ProductArticle text="Read More"></ProductArticle>
             </section>
         </>
     )
