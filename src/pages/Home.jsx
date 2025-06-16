@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import ProductArticle from "../components/ProductArticle";
-import Button from "../components/button";
+import Button from "../components/button"; 
 export default function Home() {
 
     return (
@@ -9,7 +9,7 @@ export default function Home() {
 
             <section className="PopularProducts">
                 <h2>Popular Products</h2>
-                <Button text="see all products"/>
+                <Button text="see all products" className="bg-BtnOrange"/>
 
 
                 <ProductArticle text="Read More"></ProductArticle>
