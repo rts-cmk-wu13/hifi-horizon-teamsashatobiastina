@@ -1,4 +1,4 @@
-export default function Button({ text, bgColor = 'Black' }) {
+export default function Button({ text, bgColor}) {
   const bgClassMap = {
     ElmBg: 'bg-ElmBg',
     Bg: 'bg-Bg',
