@@ -23,7 +23,7 @@ export default function Footer() {
                     </ul>
 
                     <ul>
-                        <li className='mb-2'><NavLink to='/faq'> Returns & Refunds</NavLink></li>
+                        <li className='mb-2'><NavLink to='/faq'>Returns & Refunds</NavLink></li>
                         <li className='mb-2'><NavLink to='/faq'>Delivery</NavLink></li>
                         <li className='mb-2'><NavLink to='/faq'>Privacy Policy</NavLink></li>
                         <li className='mb-2'><NavLink to='/faq'>Terms & Conditions</NavLink></li>
