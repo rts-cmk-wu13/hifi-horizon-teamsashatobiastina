@@ -1,6 +1,6 @@
 import Footer from './components/footer';
 import Header from './components/header';
-import Newsletter from './components/Newsletter';
+
 import './index.css'
 // import Header from './components/Header.jsx'
 // import Footer from './components/Footer.jsx'
@@ -16,6 +16,7 @@ function Layout() {
 <main>
   <Outlet />
 </main>
+
 <Footer />
 
     </>
