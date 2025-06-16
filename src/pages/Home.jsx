@@ -10,13 +10,13 @@ export default function Home() {
 
             <section className="PopularProducts">
                 <h2>Popular Products</h2>
-                <Button />
+                <Button text="see all products"/>
 
 
-                <ProductArticle></ProductArticle>
-                <ProductArticle></ProductArticle>
-                <ProductArticle></ProductArticle>
-                <ProductArticle></ProductArticle>
+                <ProductArticle text="Read More"></ProductArticle>
+                <ProductArticle text="Read More"></ProductArticle>
+                <ProductArticle text="Read More"></ProductArticle>
+                <ProductArticle text="Read More"></ProductArticle>
             </section>
         </>
     )
