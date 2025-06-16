@@ -1,7 +1,6 @@
 import Hero from "../components/Hero";
 import ProductArticle from "../components/ProductArticle";
-import Button from "../components/Button";
-
+import Button from "../components/button"
 export default function Home() {
 
     return (
