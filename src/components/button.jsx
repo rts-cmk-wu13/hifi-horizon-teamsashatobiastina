@@ -1,17 +1,6 @@
-export default function Button({ text, bgColor}) {
-  const bgClassMap = {
-    ElmBg: 'bg-ElmBg',
-    Bg: 'bg-Bg',
-    BtnLightGrey: 'bg-BtnLightGrey',
-    BtnDarkGrey: 'bg-BtnDarkGrey',
-    Black: 'bg-Black',
-    BtnOrange: 'bg-BtnOrange',
-  };
-
-  const bgClass = bgClassMap[bgColor] || 'bg-Black'; // fallback to black if invalid
-
+export default function Button({ text}) {
   return (
-    <button className={`${bgClass} text-black px-4 py-2 rounded`}>
+    <button className={` px-4 py-2 m-5 rounded bg-BtnOrange text-white`}>
       {text}
     </button>
   );
