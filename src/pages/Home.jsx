@@ -8,9 +8,16 @@ export default function Home() {
         <>
             <Hero />
 
-            <section className="PopularProducts">
-                <h2>Popular Products</h2>
-                <Button />
+            <section className="PopularProducts grid grid-cols-4">
+                <header className="flex col-span-4">
+                    <h2 className="text-4xl uppercase font-bold m-8 ">
+                        Popular Products
+                    </h2>
+                    <Button
+                        text="See all products"
+                        className="justify-self-end"
+                    />
+                </header>
 
 
                 <ProductArticle></ProductArticle>
