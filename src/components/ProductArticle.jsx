@@ -5,26 +5,25 @@ import Button from './button';
 export default function ProductArticle() {
 
     return (
-<<<<<<< HEAD
-        <article className='flex flex-col'>
-=======
-        <article>
->>>>>>> 0bb1b875ba1bbe2540bb90b48a22a156e3d910c6
-            <img src={ProductPic} alt="product image" />
+
+        <article className='flex flex-col items-center bg-white'>
+            <img src={ProductPic} alt="product image"
+            className='m-6'/>
             <h3>Et produktnavn</h3>
-            <p>en udgang</p>
-            <p>4000 kr</p>
-<<<<<<< HEAD
+            <p className='mb-6'>
+                en udgang</p>
+            <p className='text-2xl mb-2'>
+                4000 kr</p>
             <Button text="Read more"/>
-=======
-            <Button/>
->>>>>>> 0bb1b875ba1bbe2540bb90b48a22a156e3d910c6
         </article>
     )
 }
-// fetch produkter fra en API
+
+
 
 /*
+// fetch produkter fra en API
+
     <article>
             <img src={image} alt="product image" />
             <h3>{productname}</h3>
@@ -32,10 +31,7 @@ export default function ProductArticle() {
             <p>{price}</p>
             <Button/>
         </article>
-<<<<<<< HEAD
+
     )
-}
-    */
-=======
-        */
->>>>>>> 0bb1b875ba1bbe2540bb90b48a22a156e3d910c6
+}*/
+
