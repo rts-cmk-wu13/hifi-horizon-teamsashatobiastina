@@ -24,3 +24,4 @@ export default function ProductArticle({btnText}) {
         </article>
     )
 }
+    */
