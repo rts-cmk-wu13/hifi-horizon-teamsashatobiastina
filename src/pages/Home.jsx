@@ -9,7 +9,7 @@ export default function Home() {
         <>
             <Hero />
 
-            <section className="PopularProducts grid grid-cols-4 bg-gray-200">
+            <section className="PopularProducts grid grid-cols-4 gap-x-8 w-full p-10 bg-BgSlightGrey">
                 <header className="flex col-span-4">
                     <h2 className="text-4xl uppercase font-bold m-8 ">
                         Popular Products
