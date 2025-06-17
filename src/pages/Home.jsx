@@ -15,7 +15,7 @@ export default function Home() {
                     <h2 className="text-4xl uppercase font-bold m-8 ">
                         Popular Products
                     </h2>
-                    <Button className="justify-self-end" color='Orange'>See all products</Button>
+                    <Button className="justify-self-end" color='Orange' text="ding dong"/>
                 </header>
                 <ProductArticle text="Read More"></ProductArticle>
                 <ProductArticle text="Read More"></ProductArticle>
