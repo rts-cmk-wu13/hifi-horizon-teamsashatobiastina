@@ -13,31 +13,31 @@ export default function List() {
                 <div className="col-span-3">
                     <ul className="grid grid-cols-3 gap-6">
                         <li>
-                            <ProductArticle btntext='add to card' />
+                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={1}/>
                         </li>
                         <li>
-                            <ProductArticle />
+                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={7} />
                         </li>
                         <li>
-                            <ProductArticle />
+                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={0}/>
                         </li>
                         <li>
-                            <ProductArticle />
+                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={0}/>
                         </li>
                         <li>
-                            <ProductArticle />
+                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={10}/>
                         </li>
                         <li>
-                            <ProductArticle />
+                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={10}/>
                         </li>
                         <li>
-                            <ProductArticle />
+                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={3}/>
                         </li>
                         <li>
-                            <ProductArticle />
+                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={10}/>
                         </li>
                         <li>
-                            <ProductArticle />
+                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={3}/>
                         </li>
                     </ul>
                 </div>
