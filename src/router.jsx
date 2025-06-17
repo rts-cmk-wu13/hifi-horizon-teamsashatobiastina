@@ -10,14 +10,47 @@ import Home from "./pages/Home.jsx";
 
 
 const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Layout />,
-        children: [
-          { index: true,
-            element: <Home />
-          },
-        ]
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Home />
+      },
+      {
+        path: "produkter",
+        element: <List />
+      },
+      {
+        path: "produkter/:id",
+        element: <Detail />
+      },
+      {
+        path: "about",
+        element: <About />
+      },
+      {
+        path: "login",
+        element: <Login />
+      },
+      {
+        path: "facts",
+        element: <Faq />
+      },
+      {
+        path: "contact",
+        element: <Contact />
+      },
+      {
+        path: "tak",
+        element: <Tak />
+      },
+      {
+        path: "*",
+        element: <NotFound />
+      },
+]
     }
 
 ]);
