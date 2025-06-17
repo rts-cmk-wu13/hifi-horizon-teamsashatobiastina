@@ -9,6 +9,7 @@ export default function ProductArticle({ btnText, isProductsPage, stock }) {
     const stockColor = stock > 3 ? 'bg-green-500' : stock > 0 ? 'bg-yellow-500' : 'bg-red-500';
 
     return (
+
         <article className='grid grid-cols-2 items-center bg-white shadow-(--prodArticle) rounded-sm'>
             {/* Compare button in top-right corner */}
             {isProductsPage && (
@@ -32,6 +33,7 @@ export default function ProductArticle({ btnText, isProductsPage, stock }) {
                     </div>
                 )}
             </div>
+
         </article>
     );
 }

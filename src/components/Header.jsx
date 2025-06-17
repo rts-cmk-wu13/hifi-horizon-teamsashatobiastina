@@ -1,5 +1,5 @@
 import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
-
+import { NavLink } from "react-router-dom";
 export default function Header() {
   return (
     <div className="bg-black text-white px-8 py-6  ">
@@ -11,9 +11,9 @@ export default function Header() {
           </figure>
 
           <ul className="flex gap-8 tracking-wide uppercase">
-            <li className="cursor-pointer hover:underline">Shop</li>
-            <li className="cursor-pointer hover:underline">About Us</li>
-            <li className="cursor-pointer hover:underline">Contact Us</li>
+            <li className="cursor-pointer hover:underline" ><NavLink to='/produkter'> Shop</NavLink></li>
+            <li className="cursor-pointer hover:underline"> <NavLink to='/about'>About Us</NavLink></li>
+            <li className="cursor-pointer hover:underline"> <NavLink to='/contact'>Contact Us </NavLink></li>
           </ul>
         </div>
 
