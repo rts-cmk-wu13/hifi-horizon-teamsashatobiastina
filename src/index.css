@@ -1,58 +1,71 @@
 @import "tailwindcss";
 
-*{
+* {
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
 
 @font-face {
-    font-family: "OpenSans";
-    src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf");
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
 
 @font-face {
-    font-family: "OpenSans-italic";
-    src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf");
-    font-style: italic;
+  font-family: "OpenSans-italic";
+  src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf");
+  font-style: italic;
+}
+
+ @theme {
+  --color-ElmBg: #FFFFFF;
+  --color-BgSlightGrey: #F4F4F2;
+  --color-BtnLightGrey: #E8E8E8;
+  --color-BtnDarkGrey: #BBBFCA;
+  --color-BtnDarkerGrey: #495464;
+  --color-Black: #000000;
+  --color-BtnOrange: #FF6900;
+
+  /*SHADOW om product-Article*/
+  --prodArticle: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 
 :root {
-/* - - - - - - - - - color - - - - - - - - -  */
+  /* - - - - - - - - - color - - - - - - - - -  */
 
-/* - - - - - stock color - - - - -  */
---in-stock-color: #008000;
---few-in-stock-color: #FFA500;
---out-of-stock-color: #FF0000;
+  /* - - - - - stock color - - - - -  */
+  --in-stock-color: #008000;
+  --few-in-stock-color: #FFA500;
+  --out-of-stock-color: #FF0000;
 
-/* - - - - - background color - - - - -  */
---background-color: #FFFFFF;
---black-background-color: #000000;
+  /* - - - - - background color - - - - -  */
+  --background-color: #FFFFFF;
+  --black-background-color: #000000;
 
-/* - - - - - grey color - - - - -  */
---box-shadow-color: #F4F4F2;
---categories-color: #E8E8E8;
---header-titles: #BBBFCA;
---checkout-selector-color: #495464;
+  /* - - - - - grey color - - - - -  */
+  --box-shadow-color: #F4F4F2;
+  --categories-color: #E8E8E8;
+  --header-titles: #BBBFCA;
+  --checkout-selector-color: #495464;
 
-/* - - - - - button color - - - - -  */
---orange-button-color: #FF6900;
+  /* - - - - - button color - - - - -  */
+  --orange-button-color: #FF6900;
 
-/* - - - - - - - - - font sizes - - - - - - - - -  */
---nav-font-size: 1.125rem;
---button-font-size: 1.14rem;
---search-font-size: 1.3rem;
+  /* - - - - - - - - - font sizes - - - - - - - - -  */
+  --nav-font-size: 1.125rem;
+  --button-font-size: 1.14rem;
+  --search-font-size: 1.3rem;
 
-/* - - - - -  bold- - - - - */
---text-bold: bold;
+  /* - - - - -  bold- - - - - */
+  --text-bold: bold;
 
-/* - - - - - - - - - box shadow - - - - - - - - -  */
+  /* - - - - - - - - - box shadow - - - - - - - - -  */
 
---box-shadow-checkout: 2px 4px 24px -8px rgba(0,0,0,0.75);
---box-shadow-checkout-hover: 4px 4px 28px -4px rgba(0,0,0,0.75);
+  --box-shadow-checkout: 2px 4px 24px -8px rgba(0, 0, 0, 0.75);
+  --box-shadow-checkout-hover: 4px 4px 28px -4px rgba(0, 0, 0, 0.75);
 }
 
 

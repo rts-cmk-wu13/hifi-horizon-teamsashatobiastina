@@ -12,13 +12,13 @@ import { FaCcMastercard } from "react-icons/fa";
 export default function Footer() {
 
     return (
-        <footer className='bg-black text-white grid grid-cols-3 gap-y-8 px-4'>
+        <footer className='bg-black text-white grid grid-cols-3 gap-y-8 px-6'>
 
             <div className='footer__nav col-span-3 grid  mt-10 px-10'>
                 <nav className='col-span-2 grid grid-cols-2'>
                     <ul>
                         <li className='mb-2'><NavLink to='/'>Home</NavLink></li>
-                        <li className='mb-2'> Shop</li>
+                        <li className='mb-2'><NavLink to='/produkter'> Shop</NavLink></li>
                         <li className='mb-2'><NavLink to='/about'>About Us</NavLink></li>
                     </ul>
 
