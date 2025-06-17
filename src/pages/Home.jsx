@@ -21,12 +21,11 @@ export default function Home() {
                 <ProductArticle text="Read More"></ProductArticle>
                 <ProductArticle text="Read More"></ProductArticle>
                 <ProductArticle text="Read More"></ProductArticle>
-
+            </section>
    
-            </section> 
+            <section> 
                    <Opening />
-                <Newsletter />
-           
+            </section>
 
             <section className='p-10 bg-BgSlightGrey'>
             <Newsletter />
