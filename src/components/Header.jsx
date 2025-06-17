@@ -1,5 +1,5 @@
 import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
-
+import { NavLink } from "react-router-dom";
 export default function Header() {
   return (
     <div className="bg-black text-white px-8 py-6  ">
