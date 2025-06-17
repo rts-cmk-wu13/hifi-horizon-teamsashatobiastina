@@ -1,12 +1,12 @@
 
 import ProductPic from '../assets/Produktbilleder/cd_afspillere/creek_classic_cd.jpg'
-import Button from './button';
+import Button from './Button';
 
 export default function ProductArticle() {
 
     return (
 
-        <article className='flex flex-col items-center bg-white'>
+        <article className='flex flex-col items-center bg-white shadow-(--prodArticle) rounded-sm'>
             <img src={ProductPic} alt="product image"
             className='m-6'/>
             <h3>Et produktnavn</h3>
@@ -14,7 +14,7 @@ export default function ProductArticle() {
                 en udgang</p>
             <p className='text-2xl mb-2'>
                 4000 kr</p>
-            <Button text="Read more"/>
+            <Button color='Orange'>Read more</Button>
         </article>
     )
 }
