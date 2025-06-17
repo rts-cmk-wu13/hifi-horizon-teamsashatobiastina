@@ -1,5 +1,5 @@
 //komponent:
-export default function Button ({ color="blue", children }) {
+export default function Button ({ color="blue", text }) {
   const colors = {
     Orange: "bg-BtnOrange text-white hover:shadow-lg",
     LightGrey: "bg-BtnLightGrey text-white-800 hover:shadow-lg",
@@ -12,7 +12,7 @@ export default function Button ({ color="blue", children }) {
 
   return (
     <button className={`px-4 py-2 m-5 cursor-pointer rounded shadow-(--prodArticle) text-white ${colors[color]}`}>
-      {children}{" "}
+      {text}
     </button>
   );
 };
