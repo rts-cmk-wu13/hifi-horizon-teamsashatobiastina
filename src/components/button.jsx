@@ -1,17 +1,17 @@
 //komponent:
 export default function Button ({ color="blue", children }) {
   const colors = {
-    Orange: "bg-BtnOrange text-white hover:bg-blue-700",
-    LightGrey: "bg-BtnLightGrey text-gray-800 hover:bg-gray-300",
-    LightGray: "bg-BtnLightGrey text-gray-800 hover:bg-gray-300",
-    DarkGrey: "bg-BtnDarkGrey text-gray-800 hover:bg-gray-300",
-    DarkGray: "bg-BtnDarkGrey text-gray-800 hover:bg-gray-300",
-    DarkerGrey: "bg-BtnDarkerGrey text-gray-800 hover:bg-gray-300",
-    DarkerGray: "bg-BtnDarkerGrey text-gray-800 hover:bg-gray-300",
+    Orange: "bg-BtnOrange text-white hover:shadow-lg",
+    LightGrey: "bg-BtnLightGrey text-white-800 hover:shadow-lg",
+    LightGray: "bg-BtnLightGrey text-white-800 hover:shadow-lg",
+    DarkGrey: "bg-BtnDarkGrey text-white-800 hover:shadow-lg",
+    DarkGray: "bg-BtnDarkGrey text-white-800 hover:shadow-lg",
+    DarkerGrey: "bg-BtnDarkerGrey text-white-800 hover:shadow-lg",
+    DarkerGray: "bg-BtnDarkerGrey text-white-800 hover:shadow-lg",
   };
 
   return (
-    <button className={`px-4 py-2 m-5 rounded text-white ${colors[color]}`}>
+    <button className={`px-4 py-2 m-5 cursor-pointer rounded shadow-(--prodArticle) text-white ${colors[color]}`}>
       {children}{" "}
     </button>
   );
