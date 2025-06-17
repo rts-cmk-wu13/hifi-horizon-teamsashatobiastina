@@ -2,7 +2,7 @@
 import ProductPic from '../assets/Produktbilleder/cd_afspillere/creek_classic_cd.jpg'
 import Button from './Button';
 
-export default function ProductArticle() {
+export default function ProductArticle({btnText}) {
 
     return (
 
@@ -14,7 +14,7 @@ export default function ProductArticle() {
                 en udgang</p>
             <p className='text-2xl mb-2'>
                 4000 kr</p>
-            <Button color='Orange'text="mikkel"/>
+            <Button color='Orange' text={btnText}></Button>
         </article>
     )
 }

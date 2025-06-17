@@ -13,7 +13,7 @@ export default function List() {
                 <div className="col-span-3">
                     <ul className="grid grid-cols-3 gap-6">
                         <li>
-                            <ProductArticle />
+                            <ProductArticle btntext='add to card' />
                         </li>
                         <li>
                             <ProductArticle />
