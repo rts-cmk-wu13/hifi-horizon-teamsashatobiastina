@@ -14,7 +14,7 @@ export default function ProductArticle() {
                 en udgang</p>
             <p className='text-2xl mb-2'>
                 4000 kr</p>
-            <Button text="Read more"/>
+            <Button color='Orange'>Read more</Button>
         </article>
     )
 }

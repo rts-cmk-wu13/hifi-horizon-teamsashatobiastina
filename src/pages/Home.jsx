@@ -14,10 +14,7 @@ export default function Home() {
                     <h2 className="text-4xl uppercase font-bold m-8 ">
                         Popular Products
                     </h2>
-                    <Button
-                        text="See all products"
-                        className="justify-self-end"
-                    />
+                    <Button className="justify-self-end" color='Orange'>See all products</Button>
                 </header>
                 <ProductArticle text="Read More"></ProductArticle>
                 <ProductArticle text="Read More"></ProductArticle>
@@ -28,5 +25,5 @@ export default function Home() {
 
     )
 }
-
+/*Button is no longer self closing and uses the prop color to change color*/
 /* ProductArticle skal fetceh data fra en API */
