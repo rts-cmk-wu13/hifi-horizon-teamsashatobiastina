@@ -18,7 +18,7 @@ export default function Footer() {
                 <nav className='col-span-2 grid grid-cols-2'>
                     <ul>
                         <li className='mb-2'><NavLink to='/'>Home</NavLink></li>
-                        <li className='mb-2'> Shop</li>
+                        <li className='mb-2'><NavLink to='/produkter'> Shop</NavLink></li>
                         <li className='mb-2'><NavLink to='/about'>About Us</NavLink></li>
                     </ul>
 
