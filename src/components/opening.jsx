@@ -3,7 +3,7 @@ export default function Opening() {
     <>
   <section className="bg-black text-white px-8 py-25  ">
   <div className="flex justify-around">
-    {/* Column 1 */}
+
     <div className=" space-y-6  w-170 ">
       <h1 className="text-3xl font-semibold">What we do</h1>
       <p>We look forward to customising a system to meet your needs.</p>
@@ -26,7 +26,6 @@ export default function Opening() {
       </p>
     </div>
 
-    {/* Column 2 */}
     <div className=" space-y-8">
       <h1 className="text-3xl font-semibold">Opening hours</h1>
       <address className="not-italic">
