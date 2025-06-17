@@ -17,10 +17,10 @@ export default function Home() {
                     </h2>
                     <Button className="justify-self-end" color='Orange' text="ding dong"/>
                 </header>
-                <ProductArticle text="Read More"></ProductArticle>
-                <ProductArticle text="Read More"></ProductArticle>
-                <ProductArticle text="Read More"></ProductArticle>
-                <ProductArticle text="Read More"></ProductArticle>
+                <ProductArticle btnText='Read More'></ProductArticle>
+                <ProductArticle btnText='Read More'></ProductArticle>
+                <ProductArticle btnText='Read More'></ProductArticle>
+                <ProductArticle btnText='Read More'></ProductArticle>
             </section>
    
             <section> 
