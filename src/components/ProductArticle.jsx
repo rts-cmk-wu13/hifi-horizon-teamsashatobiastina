@@ -6,7 +6,7 @@ export default function ProductArticle() {
 
     return (
 
-        <article className='flex flex-col items-center bg-white shadow-(--prodArticle)'>
+        <article className='flex flex-col items-center bg-white shadow-(--prodArticle) rounded-sm'>
             <img src={ProductPic} alt="product image"
             className='m-6'/>
             <h3>Et produktnavn</h3>
