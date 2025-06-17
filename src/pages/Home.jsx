@@ -1,4 +1,5 @@
 import Newsletter from '../components/Newsletter';
+import Opening from '../components/opening';
 import Hero from "../components/Hero";
 import ProductArticle from "../components/ProductArticle";
 import Button from "../components/button";
@@ -24,8 +25,12 @@ export default function Home() {
                 <ProductArticle text="Read More"></ProductArticle>
                 <ProductArticle text="Read More"></ProductArticle>
 
-          
-            </section>
+   
+            </section> 
+                   <Opening />
+                <Newsletter />
+           
+
         </>
 
     )
