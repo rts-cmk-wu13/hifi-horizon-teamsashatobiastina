@@ -1,6 +1,6 @@
 
 import ProductPic from '../assets/Produktbilleder/cd_afspillere/creek_classic_cd.jpg'
-import Button from './button';
+import Button from './Button';
 
 export default function ProductArticle() {
 
