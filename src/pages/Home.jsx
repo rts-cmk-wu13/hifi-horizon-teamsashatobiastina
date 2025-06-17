@@ -1,4 +1,5 @@
 import Newsletter from '../components/Newsletter';
+import Opening from '../components/opening';
 import Hero from "../components/Hero";
 import ProductArticle from "../components/ProductArticle";
 import Button from "../components/Button";
@@ -20,6 +21,13 @@ export default function Home() {
                 <ProductArticle text="Read More"></ProductArticle>
                 <ProductArticle text="Read More"></ProductArticle>
                 <ProductArticle text="Read More"></ProductArticle>
+
+   
+            </section> 
+                   <Opening />
+                <Newsletter />
+           
+
             </section>
 
             <section className='p-10 bg-BgSlightGrey'>
