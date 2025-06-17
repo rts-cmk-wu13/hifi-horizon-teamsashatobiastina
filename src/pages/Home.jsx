@@ -28,8 +28,6 @@ export default function Home() {
                 <Newsletter />
            
 
-            </section>
-
             <section className='p-10 bg-BgSlightGrey'>
             <Newsletter />
             </section>
