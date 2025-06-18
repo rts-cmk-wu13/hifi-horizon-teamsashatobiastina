@@ -2,8 +2,10 @@
 import { IoGitCompareOutline } from "react-icons/io5";
 import ProductPic from '../assets/Produktbilleder/cd_afspillere/creek_classic_cd.jpg';
 import Button from './Button';
+import { NavLink } from "react-router-dom";
+import LinkButton from './LinkButton';
 
-export default function ProductArticle({ btnText, isProductsPage, stock }) {
+export default function ProductArticle({ btnText, isProductsPage, stock, name, price, description }) {
     // Bestem lagerstatus og farve
     const stockStatus = stock > 3 ? 'In stock' : stock > 0 ? 'Few in stock' : 'Sold out';
     const stockColor = stock > 3 ? 'bg-green-500' : stock > 0 ? 'bg-yellow-500' : 'bg-red-500';
@@ -19,13 +21,15 @@ export default function ProductArticle({ btnText, isProductsPage, stock }) {
             )}
 
             <img src={ProductPic} alt="product image" className='m-6 col-span-2 justify-self-center' />
-            <h3 className="justify-self-center col-span-2">Et produktnavn</h3>
-            <p className='mb-6 col-span-2 justify-self-center'>en udgang</p>
-            <p className='text-2xl mb-2 col-span-2 justify-self-center'>4000 kr</p>
+            <h3 className="justify-self-center col-span-2">{name}</h3>
+            <p className='mb-6 col-span-2 justify-self-center'>{description}</p>
+            <p className='text-2xl mb-2 col-span-2 justify-self-center'>{price} kr</p>
 
             {/* Stock information next to the button */}
-            <div className="flex justify-center items-center gap-10 col-span-2">
-                <Button color='Orange' text={btnText} className="col-1"></Button>
+            <div className="flex justify-center mb-6 justify-between gap-10 col-span-2">
+               <LinkButton to="/products:id" color='Orange' className="col-1" id="linkButton">
+               {btnText}
+               </LinkButton>
                 {isProductsPage && (
                     <div className="flex items-center gap-2 col-2 mr-4">
                         <span className={`w-4 h-4 rounded-full ${stockColor}`}></span>
