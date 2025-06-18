@@ -2,7 +2,7 @@ export default function Faq() {
 
     return (
         <>
-         <h1 className= "mx-16 pt-16 text-6xl font-semibold">FAQ</h1>
+         <h1 className= "mx-16 pt-16 text-7xl font-semibold text-BtnDarkerGrey">FAQ</h1>
 
             <section className='bg-white mx-16 mt-16 shadow-(--prodArticle)'>
 

@@ -5,7 +5,7 @@ export default function List() {
     return (
         <>
             <section className="grid grid-cols-4 p-12 bg-BgSlightGrey gap-x-8">
-                <h2 className="col-span-4 text-5xl font-bold mb-4 uppercase">
+                <h2 className="col-span-4 text-7xl text-BtnDarkerGrey font-bold mb-10 uppercase">
                     Products
                 </h2>
                 <div>
