@@ -1,4 +1,4 @@
-import Newsletter from '../components/Newsletter';
+import Newsletter from  '../components/Newsletter';
 import Opening from '../components/opening';
 import Hero from "../components/Hero";
 import ProductArticle from "../components/ProductArticle";
@@ -26,7 +26,6 @@ export default function Home() {
             <section> 
                    <Opening />
             </section>
-
             <section className='p-10 bg-BgSlightGrey'>
             <Newsletter />
             </section>
