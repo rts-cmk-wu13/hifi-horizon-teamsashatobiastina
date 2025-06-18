@@ -1,6 +1,6 @@
 export default function History() {
   return (
-    <section className="flex flex-col gap-20 px-9  py-12 max-w-8xl mx-auto text-center bg-ElmBg">
+    <section className="flex flex-col gap-20 px-9  py-12 max-w-8xl mx-auto text-center bg-ElmBg text-lg">
       <div className="flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2">
           <img
@@ -8,7 +8,7 @@ export default function History() {
             className="w-full h-auto "
           />
         </div>
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 ">
           <h1 className="text-2xl font-bold mb-4 ">History</h1>
           <h2 className="text-lg text-BtnOrange font-semibold mb-4">
             Established in the late 1960s, our family owned business is based in
