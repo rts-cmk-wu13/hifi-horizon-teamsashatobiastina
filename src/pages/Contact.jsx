@@ -1,7 +1,9 @@
-export default function Contact() {
+import ContactForm from "../components/Form.jsx";
 
-    return (
-        <>
-        </>
-    )
+export default function ContactPage() {
+  return (
+    <>
+      <ContactForm />
+    </>
+  );
 }
