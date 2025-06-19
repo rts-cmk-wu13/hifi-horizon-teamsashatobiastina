@@ -7,7 +7,7 @@ import LinkButton from './LinkButton';
 
 export default function ProductArticle({ btnText, isProductsPage, stock, name, price, description }) {
     // Bestem lagerstatus og farve
-    const stockStatus = stock > 3 ? 'In stock' : stock > 0 ? 'Few in stock' : 'Sold out';
+    const stockStatus = stock > 3 ? 'In stock' : stock > 0 ? 'Low stock' : 'Sold out';
     const stockColor = stock > 3 ? 'bg-green-500' : stock > 0 ? 'bg-yellow-500' : 'bg-red-500';
 
     return (
@@ -26,14 +26,14 @@ export default function ProductArticle({ btnText, isProductsPage, stock, name, p
             <p className='text-2xl mb-2 col-span-2 justify-self-center'>{price} kr</p>
 
             {/* Stock information next to the button */}
-            <div className="flex justify-center mb-6 justify-between gap-10 col-span-2">
+            <div className="flex justify-center mb-6 gap-8 col-span-2">
                <LinkButton to="/products:id" color='Orange' className="col-1" id="linkButton">
                {btnText}
                </LinkButton>
                 {isProductsPage && (
                     <div className="flex items-center gap-2 col-2 mr-4">
-                        <span className={`w-4 h-4 rounded-full ${stockColor}`}></span>
-                        <span className="text-sm text-gray-600">{stockStatus}</span>
+                        <span className={`w-3 h-3 rounded-full ${stockColor}`}></span>
+                        <span className="text-xs text-gray-600">{stockStatus}</span>
                     </div>
                 )}
             </div>
