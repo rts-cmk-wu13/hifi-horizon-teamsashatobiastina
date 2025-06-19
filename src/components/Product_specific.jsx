@@ -1,7 +1,7 @@
 export default function Specific() {
   return (
     <>
-    <div className="my-8 text-3xl font-semibold uppercase">
+    <div className="my-8 mx-10 text-3xl font-semibold uppercase">
 <h1>product specifications</h1>
 </div>
 <table class="table-auto w-4/10 text-center ml-20 border-separate border-spacing-0">
