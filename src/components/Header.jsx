@@ -7,10 +7,11 @@ export default function Header() {
       <nav className="flex justify-between items-center font-light text-xs">
 
         <div className="flex items-center gap-5">
+<NavLink to="/">
           <figure className="flex items-center">
-            <img src="public/logo_sml 1.svg" alt="Logo" className="w-16" />
+            <img    src="public/logo_sml 1.svg" alt="Logo" className="w-16" />
           </figure>
-
+</NavLink>
 <ul className="flex gap-8 tracking-wide uppercase overflow-visible">
 
  <li className="relative group cursor-pointer">
