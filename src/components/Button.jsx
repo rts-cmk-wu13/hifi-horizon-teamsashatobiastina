@@ -11,7 +11,7 @@ export default function Button ({ color="blue", text }) {
   };
 
   return (
-    <button className={`px-4 py-2 m-5 cursor-pointer rounded shadow-(--prodArticle) text-white ${colors[color]}`}>
+    <button className={`px-4 py-2 m-5 w-full cursor-pointer rounded shadow-(--prodArticle) text-white ${colors[color]}`}>
       {text}
     </button>
   );
