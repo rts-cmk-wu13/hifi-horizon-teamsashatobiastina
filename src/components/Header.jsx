@@ -14,7 +14,7 @@ export default function Header() {
 <ul className="flex gap-8 tracking-wide uppercase overflow-visible">
 
  <li className="relative group cursor-pointer">
-  <NavLink to="/produkter" className="hover:underline">Shop</NavLink>
+  <NavLink to="/produkter" className="hover:underline pb-15 pr-2">Shop</NavLink>
 
   <div className="absolute hidden group-hover:flex flex-col top-16 left-0 bg-white text-black py-5  px-8 shadow-lg z-50 w-74">
     <h3 className="font-bold text-lg mb-4">Browse Categories</h3>
