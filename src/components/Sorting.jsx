@@ -1,6 +1,12 @@
 export default function Sorting({ filterProduct, activeCategory }) {
   return (
-    <div id="buttons">
+    <section className="bg-BtnLightGrey ">
+
+<ul className="flex gap-8 tracking-wide uppercase overflow-visible">
+  <li className="relative group cursor-pointer">
+    <span className="block ">Brand</span> {/* This gives something to hover over */}
+    
+    <div className="absolute hidden group-hover:flex flex-col top-auto left-0 bg-BtnLightGrey text-black py-5 px-8 shadow-lg z-50 w-auto">
       <button
         className={`button-value ${activeCategory === "All" ? "active" : ""}`}
         onClick={() => filterProduct("All")}
@@ -26,5 +32,9 @@ export default function Sorting({ filterProduct, activeCategory }) {
         Manley
       </button>
     </div>
+  </li>
+</ul>
+
+    </section>
   );
 }
