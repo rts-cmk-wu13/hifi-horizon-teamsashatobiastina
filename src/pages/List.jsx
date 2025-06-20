@@ -55,51 +55,43 @@ export default function List() {
 }
 
 */
-
+import { useState } from "react";
+import products from "../data.json";
+import Sorting from "../components/Sorting";
 import ProductArticle from "../components/ProductArticle";
 
 export default function List() {
+  const [filtered, setFiltered] = useState(products);
+  const [activeCategory, setActiveCategory] = useState("All");
 
-    return (
-        <>
-            <section className="grid grid-cols-4 p-12 bg-BgSlightGrey gap-x-8">
-                <h2 className="col-span-4 text-7xl text-BtnDarkerGrey font-bold mb-10 uppercase">
-                    Products
-                </h2>
-                <div>
-                    <form action="#">her skal være filtreringsformen</form></div>
-                <div className="col-span-3">
-                    <ul className="grid grid-cols-3 gap-6">
-                        <li>
-                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={1}/>
-                        </li>
-                        <li>
-                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={7} />
-                        </li>
-                        <li>
-                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={0}/>
-                        </li>
-                        <li>
-                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={0}/>
-                        </li>
-                        <li>
-                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={10}/>
-                        </li>
-                        <li>
-                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={10}/>
-                        </li>
-                        <li>
-                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={3}/>
-                        </li>
-                        <li>
-                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={10}/>
-                        </li>
-                        <li>
-                            <ProductArticle btnText='Add to cart' isProductsPage={true} stock={3}/>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </>
-    )
+  const filterProduct = (category) => {
+    setActiveCategory(category);
+    if (category === "All") {
+      setFiltered(products);
+    } else {
+      setFiltered(
+        products.filter(
+          (item) => item.producent.toLowerCase() === category.toLowerCase()
+        )
+      );
+    }
+  };
+
+  return (
+    <section>
+      <Sorting filterProduct={filterProduct} activeCategory={activeCategory} />
+      <ul>
+        {filtered.map((product) => (
+          <li key={product.id}>
+            <ProductArticle
+              btnText="Add to cart"
+              isProductsPage={true}
+              stock={product.stock}
+              product={product}
+            />
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
 }
