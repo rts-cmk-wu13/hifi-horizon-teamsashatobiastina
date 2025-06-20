@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../hooks/useAuth";
 import Sorting from "../components/Sorting";
 import ProductArticle from "../components/ProductArticle";
+import { useAuth } from "../contexts/Authcontext";
 
 export default function List() {
   const [products, setProducts] = useState([]);
