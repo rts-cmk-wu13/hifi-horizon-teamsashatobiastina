@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useAuth } from "../hooks/useAuth";
 import Sorting from "../components/Sorting";
 import ProductArticle from "../components/ProductArticle";
 import { useAuth } from "../contexts/Authcontext";
@@ -7,7 +6,7 @@ import { useAuth } from "../contexts/Authcontext";
 export default function List() {
   const [products, setProducts] = useState([]);
   const [filtered, setFiltered] = useState([]);
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategories, setActiveCategories] = useState(["All"]);
   const [isLoading, setIsLoading] = useState(true);
   const { token } = useAuth();
 
@@ -31,15 +30,23 @@ export default function List() {
       });
   }, [token]);
 
-  const filterProduct = (category) => {
-    setActiveCategory(category);
-    if (category === "All") {
+  const filterProduct = (brand) => {
+    let updated;
+    if (brand === "All") {
+      updated = ["All"];
+    } else {
+      updated = activeCategories.includes(brand)
+        ? activeCategories.filter((b) => b !== brand)
+        : [...activeCategories.filter((b) => b !== "All"), brand];
+      if (updated.length === 0) updated = ["All"];
+    }
+    setActiveCategories(updated);
+
+    if (updated.includes("All")) {
       setFiltered(products);
     } else {
       setFiltered(
-        products.filter(
-          (item) => item.producent.toLowerCase() === category.toLowerCase()
-        )
+        products.filter((item) => updated.includes(item.producent))
       );
     }
   };
@@ -54,8 +61,8 @@ export default function List() {
       <div>
         <Sorting
           filterProduct={filterProduct}
-          activeCategory={activeCategory}
-          products={products} // only needed if you're generating brand buttons dynamically
+          activeCategories={activeCategories}
+          products={products}
         />
       </div>
       <div className="col-span-3">
