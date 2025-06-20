@@ -1,27 +1,37 @@
-/*
+
 import { useEffect, useState } from "react";
 import ProductArticle from "../components/ProductArticle";
+import { useAuth } from "../contexts/Authcontext";
 
 export default function List() {
     const [products, setProducts] = useState([]); // State til at gemme produkter
-    const [loading, setLoading] = useState(true); // State til loading-indikator
+    const [isLoading, setIsLoading] = useState(true); // State til loading-indikator
+
+    const { token } = useAuth();
 
     useEffect(() => {
         // Fetch data fra API
-        fetch("http://127.0.0.1:8000/products/")
-            .then((response) => response.json())
-            .then((data) => {
-                setProducts(data); // Gem produkter i state
-                setLoading(false); // Sluk loading-indikator
+        fetch("http://localhost:4000/products", {
+       method: "GET",
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    })
+            .then(response => response.json())
+            .then((result) => {
+                console.log("API response:", result);
+                setProducts(result); 
             })
             .catch((error) => {
-                console.error("Error fetching products:", error);
-                setLoading(false);
+                console.error("Error fetching secrets:", error);
+            })
+            .finally(() => {
+                setIsLoading(false); // Stop loading
             });
-    }, []);
+        }, [token])
 
-    if (loading) {
-        return <p>Loading products...</p>; // Vis loading-indikator
+    if (isLoading) {
+        return <p>Loading...</p>;
     }
 
     return (
@@ -38,12 +48,14 @@ export default function List() {
                         {products.map((product) => (
                             <li key={product.id}>
                                 <ProductArticle
+                                    id={product.id}
                                     btnText="Add to cart"
                                     isProductsPage={true}
                                     stock={product.stock} // Send lagerbeholdning
-                                    name={product.name} // Send produktnavn
-                                    price={product.price} // Send pris
+                                    name={product.productname} // Send produktnavn
+                                    price={product.pris} // Send pris
                                     description={product.description} // Send beskrivelse
+                                    image={product.image} // Send billede
                                 />
                             </li>
                         ))}
@@ -54,8 +66,10 @@ export default function List() {
     );
 }
 
-*/
 
+
+
+/*
 import ProductArticle from "../components/ProductArticle";
 
 export default function List() {
@@ -103,3 +117,4 @@ export default function List() {
         </>
     )
 }
+*/
