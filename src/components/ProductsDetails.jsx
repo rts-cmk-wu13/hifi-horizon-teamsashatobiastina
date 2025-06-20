@@ -7,23 +7,23 @@ import { IoGitCompareOutline } from "react-icons/io5";
 import { useAuth } from "../contexts/Authcontext";
 
 export default function ProductsDetails() {
-        const { id } = useParams();
-        const [product, setProduct] = useState(null);
-        const [loading, setLoading] = useState(true);
+    const { id } = useParams();
+    const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
 
-          const { token } = useAuth();
-    
-        useEffect(() => {
-       fetch(`http://localhost:4000/products/${id}`, {
-       method: "GET",
-        headers: {
-            Authorization: `Bearer ${token}`,
-        }, 
-    })
+    const { token } = useAuth();
+
+    useEffect(() => {
+        fetch(`http://localhost:4000/products/${id}`, {
+            method: "GET",
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        })
             .then(response => response.json())
             .then((result) => {
                 console.log("API response:", result);
-                setProduct(result); 
+                setProduct(result);
             })
             .catch((error) => {
                 console.error("Error fetching secrets:", error);
@@ -31,15 +31,15 @@ export default function ProductsDetails() {
             .finally(() => {
                 setLoading(false); // Stop loading
             });
-        },[token]); 
+    }, [token]);
 
-        
+
     if (loading) return <p>Loading...</p>;
     if (!product) return <p>Product not found.</p>;
 
-     const stockStatus = product.stock > 3 ? 'In stock' : product.stock > 0 ? 'Low stock' : 'Sold out';
-     const stockColor = product.stock > 3 ? 'bg-green-500' : product.stock > 0 ? 'bg-yellow-500' : 'bg-red-500';
-  
+    const stockStatus = product.stock > 3 ? 'In stock' : product.stock > 0 ? 'Low stock' : 'Sold out';
+    const stockColor = product.stock > 3 ? 'bg-green-500' : product.stock > 0 ? 'bg-yellow-500' : 'bg-red-500';
+
     return (
         <section className="grid grid-cols-2 gap-2 px-14 items-center">
             <h1 className="col-span-2 row-1 text-7xl uppercase font-bold text-BtnDarkerGrey mt-8">Product</h1>
@@ -112,8 +112,9 @@ export default function ProductsDetails() {
                         <button className="text-4xl" type="button" aria-label="Øg antal">+</button>
                     </div>
 
-                    <Button color="Orange" text="Add to Card">Add to card</Button>
-
+                    <div className="flex justify-end ml-auto w-full">
+                        <Button color="Orange" text="Add to Card">Add to card</Button>
+                    </div>
                 </div>
 
             </article>
