@@ -4,7 +4,7 @@ export default function Sorting({ filterProduct, activeCategory }) {
 
 <ul className="flex gap-8 tracking-wide uppercase overflow-visible">
   <li className="relative group cursor-pointer">
-    <span className="block ">Brand</span> {/* This gives something to hover over */}
+    <span className="block ">Brand</span> 
     
     <div className="absolute hidden group-hover:flex flex-col top-auto left-0 bg-BtnLightGrey text-black py-5 px-8 shadow-lg z-50 w-auto">
       <button
