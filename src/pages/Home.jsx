@@ -3,9 +3,22 @@ import Opening from '../components/opening';
 import Hero from "../components/Hero";
 import ProductArticle from "../components/ProductArticle";
 import LinkButton from "../components/LinkButton";
-import Button from "../components/Button";
+import { useEffect, useState } from "react";
+//import Button from "../components/Button";
 
 export default function Home() {
+
+     const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:4000/products")
+            .then(res => res.json())
+            .then(data => {
+                // Vælg 4 tilfældige produkter
+                const shuffled = data.sort(() => 0.5 - Math.random());
+                setProducts(shuffled.slice(0, 4));
+            });
+    }, []);
 
     return (
         <>
@@ -18,10 +31,19 @@ export default function Home() {
                     </h2>
                     <LinkButton to="/produkter" color='Orange'> See all products</LinkButton>
                 </header>
-                <ProductArticle btnText='Read More'></ProductArticle>
-                <ProductArticle btnText='Read More'></ProductArticle>
-                <ProductArticle btnText='Read More'></ProductArticle>
-                <ProductArticle btnText='Read More'></ProductArticle>
+                 {products.map(product => (
+                    <ProductArticle
+                        key={product.id}
+                        id={product.id}
+                        btnText="Read More"
+                        name={product.productname}
+                        price={product.pris}
+                        description={product.producent}
+                        image={product.image}
+                        stock={product.stock}
+                        isProductsPage={false}
+                    />
+                ))}
             </section>
    
             <section> 
