@@ -12,7 +12,7 @@ function Layout() {
   return (
     <>
 <Header />
-<main>
+<main className=' bg-BgSlightGrey pb-10'>
   <Outlet />
 </main>
 

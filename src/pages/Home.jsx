@@ -1,7 +1,8 @@
-import Newsletter from '../components/Newsletter';
+import Newsletter from  '../components/Newsletter';
 import Opening from '../components/opening';
 import Hero from "../components/Hero";
 import ProductArticle from "../components/ProductArticle";
+import LinkButton from "../components/LinkButton";
 import Button from "../components/Button";
 
 export default function Home() {
@@ -11,11 +12,11 @@ export default function Home() {
             <Hero />
 
             <section className="PopularProducts grid grid-cols-4 gap-x-8 w-full p-14 bg-BgSlightGrey">
-                <header className="flex col-span-4">
+                <header className="flex col-span-4 justify-between">
                     <h2 className="text-4xl uppercase font-bold m-8 ">
                         Popular Products
                     </h2>
-                    <Button className="justify-self-end" color='Orange' text="ding dong"/>
+                    <LinkButton to="/produkter" color='Orange'> See all products</LinkButton>
                 </header>
                 <ProductArticle btnText='Read More'></ProductArticle>
                 <ProductArticle btnText='Read More'></ProductArticle>
@@ -26,7 +27,6 @@ export default function Home() {
             <section> 
                    <Opening />
             </section>
-
             <section className='p-10 bg-BgSlightGrey'>
             <Newsletter />
             </section>
