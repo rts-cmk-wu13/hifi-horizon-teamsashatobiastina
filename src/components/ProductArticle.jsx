@@ -5,7 +5,7 @@ import Button from './Button';
 import { NavLink } from "react-router-dom";
 //import LinkButton from './LinkButton';
 
-export default function ProductArticle({ id, btnText, isProductsPage, stock, name, price, description, image }) {
+export default function ProductArticle({ id, btnText, isProductsPage, stock, name, price, description, image, productname}) {
     // Bestem lagerstatus og farve
     const stockStatus = stock === 3 ? 'In stock' : stock === 1 ? 'Sold Out' : 'Low stock';
     const stockColor = stock === 3 ? 'bg-green-500' : stock === 1 ? 'bg-red-500' : 'bg-yellow-500';
@@ -20,7 +20,7 @@ export default function ProductArticle({ id, btnText, isProductsPage, stock, nam
                     </button>
                 )}
 
-                <img src={image} alt="product image" className='m-6 col-span-2 justify-self-center w-auto max-h-[130px]' />
+                <img src={`https://hifihorizon-db.onrender.com${image}`} alt={productname} className='m-6 col-span-2 justify-self-center w-auto max-h-[130px]' />
                 <h3 className="justify-self-center col-span-2">{name}</h3>
                 <p className='mb-6 col-span-2 justify-self-center'>{description}</p>
                 <p className='text-2xl mb-2 col-span-2 justify-self-center'>{price} kr</p>

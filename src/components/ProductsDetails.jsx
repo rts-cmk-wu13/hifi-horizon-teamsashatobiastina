@@ -41,13 +41,13 @@ export default function ProductsDetails() {
 
     return (
         <section className="grid grid-cols-2 gap-2 px-14 items-center">
-            <h1 className="col-span-2 row-1 text-7xl uppercase font-bold text-BtnDarkerGrey mt-8">Product</h1>
+            <h1 className="col-span-2 row-1 text-7xl uppercase font-bold text-BtnDarkerGrey mt-8">{product.productname}</h1>
 
             <article className="flex flex-col items-center w-full justify-between gap-20">
 
                 <div className="flex justify-center w-full items-center gap-2">
                     <FaChevronLeft className="text-6xl text-BtnDarkGrey" />
-                    <img className="w-100 max-w-full" src={product.image} alt="produktbillede" />
+                    <img className="w-100 max-w-full" src={`https://hifihorizon-db.onrender.com${product.image}`} alt={product.productname} />
                     <FaChevronRight className="text-6xl text-BtnDarkGrey" />
                 </div>
                 <div className="flex gap-2 justify-center items-end justify-items-end">

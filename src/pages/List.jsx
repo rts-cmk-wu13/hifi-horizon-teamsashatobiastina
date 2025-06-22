@@ -11,10 +11,9 @@ export default function List() {
   const { token } = useAuth();
 
   useEffect(() => {
-    fetch("http://localhost:4000/products", {
+    fetch("https://hifihorizon-db.onrender.com/products/", {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${token}`,
       },
     })
       .then((response) => response.json())
@@ -76,7 +75,7 @@ export default function List() {
                 stock={product.stock}
                 name={product.productname}
                 price={product.pris}
-                description={product.description}
+                description={product.desc}
                 image={product.image}
               />
             </li>
