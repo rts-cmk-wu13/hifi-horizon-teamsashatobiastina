@@ -1,0 +1,20 @@
+import { NavLink } from "react-router-dom";
+
+//komponent:
+export default function LinkButton ({ color="blue", to, children }) {
+    const colors = {
+      Orange: "bg-BtnOrange text-white hover:shadow-lg",
+      LightGrey: "bg-BtnLightGrey text-white-800 hover:shadow-lg",
+      LightGray: "bg-BtnLightGrey text-white-800 hover:shadow-lg",
+      DarkGrey: "bg-BtnDarkGrey text-white-800 hover:shadow-lg",
+      DarkGray: "bg-BtnDarkGrey text-white-800 hover:shadow-lg",
+      DarkerGrey: "bg-BtnDarkerGrey text-white-800 hover:shadow-lg",
+      DarkerGray: "bg-BtnDarkerGrey text-white-800 hover:shadow-lg",
+    };
+  
+    return (
+      <NavLink to={to} className={`px-6 py-3 self-center h-12 cursor-pointer rounded shadow-(--prodArticle) text-white ${colors[color]}`}>
+        {children}
+      </NavLink>
+    );
+  };
