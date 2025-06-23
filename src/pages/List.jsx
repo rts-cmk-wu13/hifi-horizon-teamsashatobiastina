@@ -3,18 +3,18 @@ import { useEffect, useState } from "react";
 import Sorting from "../components/Sorting";
 import ProductArticle from "../components/ProductArticle";
 import { useAuth } from "../contexts/Authcontext";
-import Header from "../components/header";
+
 
 export default function List() {
   const location = useLocation();
   const [search, setSearch] = useState("");
   const [products, setProducts] = useState([]);
   const [activeCategories, setActiveCategories] = useState(["All"]);
-  const [activeColors, setActiveColors] = useState(["All"]);
+
   const [isLoading, setIsLoading] = useState(true);
   const { token } = useAuth();
 
-  // Set search from URL on mount or when URL changes
+
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     setSearch(params.get("q") || "");
@@ -30,7 +30,7 @@ export default function List() {
       .then((response) => response.json())
       .then((result) => {
         setProducts(result);
-        // setFiltered(result); // default filtered list = all
+
       })
       .catch((error) => {
         console.error("Error fetching products:", error);
@@ -52,16 +52,10 @@ export default function List() {
     }
     setActiveCategories(updated);
 
-    // if (updated.includes("All")) {
-    //   setFiltered(products);
-    // } else {
-    //   setFiltered(
-    //     products.filter((item) => updated.includes(item.producent))
-    //   );
-    // }
+
   };
 
-  // Combine both filters here:
+
   const filteredProducts = products.filter((product) => {
     const matchesCategory =
       activeCategories.includes("All") ||
