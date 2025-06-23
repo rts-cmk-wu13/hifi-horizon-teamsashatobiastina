@@ -1,7 +1,26 @@
+import { useState } from "react";
 import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 
 export default function Header() {
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleInput = (e) => {
+    setQuery(e.target.value);
+  };
+
+    const handleSubmit = (e) => {
+    e.preventDefault();
+    // If already on /produkter, update the query param
+    if (location.pathname === "/produkter") {
+      navigate(`?q=${encodeURIComponent(query)}`);
+    } else {
+      navigate(`/produkter?q=${encodeURIComponent(query)}`);
+    }
+  };
+
   return (
     <div className="bg-black text-white px-8 py-6">
       <nav className="flex justify-between items-center font-light text-xs">
@@ -42,18 +61,20 @@ export default function Header() {
 
         <div className="flex items-center gap-10">
           {/* Search */}
-          <form action="./search/" className="flex items-center space-x-2">
-            <label htmlFor="product" className="flex items-center cursor-pointer">
-              <FaSearch />
-            </label>
-            <input
-              type="search"
-              id="product"
-              name="q"
-              className="px-2 py-1 text-black bg-white"
-              placeholder="Search a product"
-            />
-          </form>
+ <form onSubmit={handleSubmit} className="flex items-center space-x-2">
+      <label htmlFor="product" className="flex items-center cursor-pointer">
+        <FaSearch />
+      </label>
+      <input
+        type="search"
+        id="product"
+        name="q"
+        className="px-2 py-1 text-black bg-white"
+        placeholder="Search a product"
+        value={query}
+        onChange={handleInput}
+      />
+    </form>
 
           <div className="flex gap-3">
             <FaUser className="cursor-pointer" size={20} />
@@ -66,3 +87,5 @@ export default function Header() {
     </div>
   );
 }
+
+
