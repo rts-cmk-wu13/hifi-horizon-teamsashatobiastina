@@ -15,19 +15,21 @@ export default function Specific() {
 
   return (
     <>
-      <div className="my-8 mx-16 text-3xl font-semibold uppercase">
+      <div className="my-4 text-center mx-4 sm:my-8 sm:mx-16 text-xl sm:text-3xl font-semibold uppercase">
         <h1>Product specifications</h1>
       </div>
-      <table className="table-auto w-4/10 text-center ml-20 border-separate border-spacing-0">
-        <tbody className="divide-y divide-x divide-gray-200">
-          {Object.entries(specs).map(([key, value]) => (
-            <tr key={key} className="odd:bg-BtnLightGrey even:bg-gray-100">
-              <td className="w-4/10 p-2 font-bold border-r-2 border-gray-300">{key}</td>
-              <td className="p-2">{value}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="overflow-x-auto px-2 sm:px-0">
+        <table className="table-auto w-auto max-w-xs sm:max-w-lg mx-auto text-center border-separate border-spacing-0 min-w-[220px]">
+          <tbody className="divide-y divide-x divide-gray-200">
+            {Object.entries(specs).map(([key, value]) => (
+              <tr key={key} className="odd:bg-BtnLightGrey even:bg-gray-100">
+                <td className="w-1/2 px-2 py-1 font-bold border-r-2 border-gray-300 text-xs sm:text-base">{key}</td>
+                <td className="px-2 py-1 text-xs sm:text-base">{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }
