@@ -1,21 +1,20 @@
 import { useState } from "react";
-import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
+import { FaSearch, FaShoppingCart, FaUser, FaAlignJustify } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../contexts/Authcontext";
 
 export default function Header() {
   const [query, setQuery] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
     const { user } = useAuth(); 
 
-  const handleInput = (e) => {
-    setQuery(e.target.value);
-  };
+  const handleInput = (e) => setQuery(e.target.value);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // If already on /produkter, update the query param
     if (location.pathname === "/produkter") {
       navigate(`?q=${encodeURIComponent(query)}`);
     } else {
@@ -34,29 +33,40 @@ export default function Header() {
   };
 
   return (
-    <div className="bg-black text-white px-8 py-6">
-      <nav className="flex justify-between items-center font-light text-xs">
 
-        <div className="flex items-center gap-5">
-          <NavLink to="/">
+    <div className="bg-white text-black md:bg-black md:text-white px-2 py-4 sm:px-8 sm:py-6">
+      <nav className="flex flex-col sm:flex-row justify-between items-center font-light text-xs gap-4 sm:gap-0">
+        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 w-full relative">
+          <NavLink to="/" className="mb-2 sm:mb-0">
             <figure className="flex items-center">
-              <img src="public/logo_sml 1.svg" alt="Logo" className="w-16" />
+              <img src="public/logo_sml 1.svg" alt="Logo" className="w-14 sm:w-16" />
             </figure>
           </NavLink>
-          <ul className="flex gap-8 tracking-wide uppercase overflow-visible">
-
+        
+          <button
+            className="block md:hidden mt-2"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label="Open menu"
+          >
+            {menuOpen ? (
+              <IoMdClose size={28} />
+            ) : (
+              <FaAlignJustify size={28} />
+            )}
+          </button>
+         
+          <ul className="hidden md:flex flex-row gap-8 tracking-wide uppercase overflow-visible">
             <li className="relative group cursor-pointer">
-              <NavLink to="/produkter" className="hover:underline pb-15 pr-2">Shop</NavLink>
-
-              <div className="absolute hidden group-hover:flex flex-col top-16 left-0 bg-white text-black py-5  px-8 shadow-lg z-50 w-74">
+              <NavLink to="/produkter" className="hover:underline pb-2 sm:pb-0 pr-2">Shop</NavLink>
+              <div className="absolute hidden group-hover:flex flex-col top-8 sm:top-16 left-0 bg-white text-black py-5 px-8 shadow-lg z-50 w-64">
                 <h3 className="font-bold text-lg mb-4">Browse Categories</h3>
                 <a href="#" className="text-[#8a6d3b] hover:underline py-1 text-lg">CD Players</a>
-                <a href="#" className="text-[#8a6d3b] hover:underline py-1  text-lg">DVD Players</a>
-                <a href="#" className="text-[#8a6d3b] hover:underline py-1  text-lg">Preamps</a>
-                <a href="#" className="text-[#8a6d3b] hover:underline py-1  text-lg">Speakers</a>
-                <a href="#" className="text-[#8a6d3b] hover:underline py-1  text-lg">Turntables</a>
-                <a href="#" className="text-[#8a6d3b] hover:underline py-1  text-lg">Integrated Amplifiers</a>
-                <a href="#" className="text-[#8a6d3b] hover:underline py-1  text-lg">Power Amplifiers</a>
+                <a href="#" className="text-[#8a6d3b] hover:underline py-1 text-lg">DVD Players</a>
+                <a href="#" className="text-[#8a6d3b] hover:underline py-1 text-lg">Preamps</a>
+                <a href="#" className="text-[#8a6d3b] hover:underline py-1 text-lg">Speakers</a>
+                <a href="#" className="text-[#8a6d3b] hover:underline py-1 text-lg">Turntables</a>
+                <a href="#" className="text-[#8a6d3b] hover:underline py-1 text-lg">Integrated Amplifiers</a>
+                <a href="#" className="text-[#8a6d3b] hover:underline py-1 text-lg">Power Amplifiers</a>
                 <a href="#" className="text-[#8a6d3b] hover:underline py-1 text-lg">Tube Amplifiers</a>
               </div>
             </li>
@@ -68,12 +78,19 @@ export default function Header() {
               <NavLink to="/contact">Contact Us</NavLink>
             </li>
           </ul>
+     
+     {menuOpen && (
+  <div className="absolute top-33 text-center text-lg left-0 right-0 bg-white text-black shadow-lg z-50 flex flex-col gap-2 py-4  md:hidden">
+    <NavLink to="/produkter" className="py-2 border-b border-gray-200 px-6" onClick={() => setMenuOpen(false)}>Shop</NavLink>
+    <NavLink to="/about" className="py-2 border-b border-gray-200 px-6" onClick={() => setMenuOpen(false)}>About Us</NavLink>
+    <NavLink to="/contact" className="py-2 px-6" onClick={() => setMenuOpen(false)}>Contact Us</NavLink>
+  </div>
+)}
         </div>
+  
+        <div className="hidden md:flex items-center gap-4 sm:gap-10 w-full sm:w-auto justify-end">
+          <form onSubmit={handleSubmit} className="flex items-center space-x-2 w-full max-w-xs">
 
-
-        <div className="flex items-center gap-10">
-          {/* Search */}
-          <form onSubmit={handleSubmit} className="flex items-center space-x-2">
             <label htmlFor="product" className="flex items-center cursor-pointer">
               <FaSearch />
             </label>
@@ -81,7 +98,9 @@ export default function Header() {
               type="search"
               id="product"
               name="q"
-              className="px-2 py-1 text-black bg-white"
+
+              className="px-2 py-1 text-black bg-white rounded w-full"
+
               placeholder="Search a product"
               value={query}
               onChange={handleInput}
@@ -91,6 +110,7 @@ export default function Header() {
           <div className="flex gap-3">
             <FaUser className="cursor-pointer" size={20} onClick={handleProfileClick} />
             <div className="relative cursor-pointer mr-10">
+
               <FaShoppingCart size={20} />
             </div>
           </div>
@@ -99,5 +119,3 @@ export default function Header() {
     </div>
   );
 }
-
-

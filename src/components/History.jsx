@@ -1,20 +1,22 @@
 export default function History() {
   return (
-    <section className="flex flex-col gap-20 px-9  py-12 max-w-8xl mx-auto text-center bg-ElmBg text-lg">
-      <div className="flex flex-col md:flex-row items-center gap-10">
-        <div className="md:w-1/2">
+    <section className="flex flex-col gap-12 px-4 sm:px-8 py-8 max-w-5xl mx-auto bg-ElmBg text-base md:text-lg">
+
+      <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+        <div className="md:w-1/2 w-full">
           <img
             src="src/assets/extra billeder/History1.png"
-            className="w-full h-auto "
+            className="w-full h-auto rounded"
+            alt="History"
           />
         </div>
-        <div className="md:w-1/2 ">
-          <h1 className="text-2xl font-bold mb-4 ">History</h1>
-          <h2 className="text-lg text-BtnOrange font-semibold mb-4">
+        <div className="md:w-1/2 w-full">
+          <h1 className="text-xl md:text-2xl font-bold mb-2 text-center md:text-left">History</h1>
+          <h2 className="text-base md:text-lg text-BtnOrange font-semibold mb-2 text-center md:text-left">
             Established in the late 1960s, our family owned business is based in
             Edinburgh and Falkirk, but services customers across the UK.
           </h2>
-          <p>
+          <p className="text-center md:text-left">
             Our Edinburgh branch has the longest history as an audio retailer in
             the UK. During recent renovations, receipts were found from
             Nicolson’s Gramophone Saloon dating back to 1926. In the 1950s WG
@@ -30,20 +32,21 @@ export default function History() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row-reverse items-center gap-10">
-        <div className="md:w-1/2">
+ 
+      <div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10">
+        <div className="md:w-1/2 w-full">
           <img
             src="src/assets/extra billeder/History2.png"
             alt="Shop front"
-            className="w-full h-auto"
+            className="w-full h-auto rounded"
           />
         </div>
-        <div className="md:w-1/2">
-          <h1 className="text-2xl font-bold mb-4">Hear The Difference</h1>
-          <h2 className="text-lg text-BtnOrange font-semibold mb-4">
+        <div className="md:w-1/2 w-full">
+          <h1 className="text-xl md:text-2xl font-bold mb-2 text-center md:text-left">Hear The Difference</h1>
+          <h2 className="text-base md:text-lg text-BtnOrange font-semibold mb-2 text-center md:text-left">
             Book a demonstration at our Edinburgh or Falkirk showrooms.
           </h2>
-          <p>
+          <p className="text-center md:text-left">
             Would you choose a quality car without a test drive? If you are
             familiar with the brand and have great trust in it, you might.
             However, our listening preferences are unique to the individual and
@@ -60,21 +63,21 @@ export default function History() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center gap-10">
-        <div className="md:w-1/2">
+     
+      <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+        <div className="md:w-1/2 w-full">
           <img
             src="src/assets/extra billeder/History3.png"
-            className="w-full h-auto "
+            className="w-full h-auto rounded"
+            alt="Services"
           />
         </div>
-        <div className="md:w-1/2">
-          <h1 className="text-2xl font-bold mb-4 ">Services</h1>
-          <h2 className="text-lg text-BtnOrange font-semibold mb-4">
-            Our passion for the products we sell and, for our customers’
-            satisfaction simply means that we happily offer additional services
-            not found on the high-street.
+        <div className="md:w-1/2 w-full">
+          <h1 className="text-xl md:text-2xl font-bold mb-2 text-center md:text-left">Services</h1>
+          <h2 className="text-base md:text-lg text-BtnOrange font-semibold mb-2 text-center md:text-left">
+            Our passion for the products we sell and, for our customers’ satisfaction simply means that we happily offer additional services not found on the high-street.
           </h2>
-          <p>
+          <p className="text-center md:text-left">
             Home Setup - We want to ensure that the equipment you’ve purchased
             from us is installed correctly and sounds perfect; and we happily
             provide this service throughout the UK. Part Exchange – To help you
@@ -82,28 +85,26 @@ export default function History() {
             offer a set price, or sell your old kit on your behalf. Turntable
             Doctor – Our turntable experts have been trained by the
             manufacturers for initial setup, long-term maintenance, and
-            upgrading your high quality turntables. Record Cleaning Service –
-            Have some old records that need a bit of love? We offer Scotland’s
-            very own professional record cleaning service with our bespoke
-            Pro-Ject record cleaner.
+            upgrading your high quality turntables. Record Cleaning Service – Have some old records that need a bit of love? We offer Scotland’s very own professional record cleaning service with our bespoke Pro-Ject record cleaner.
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row-reverse items-center gap-10">
-        <div className="md:w-1/2">
+     
+      <div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-10">
+        <div className="md:w-1/2 w-full">
           <img
             src="src/assets/extra billeder/History4.png"
             alt="Shop front"
-            className="w-full h-auto"
+            className="w-full h-auto rounded"
           />
         </div>
-        <div className="md:w-1/2">
-          <h1 className="text-2xl font-bold mb-4">Tailored For You</h1>
-          <h2 className="text-lg text-BtnOrange font-semibold mb-4">
-     We look forward to customising a system to meet your needs. 
+        <div className="md:w-1/2 w-full">
+          <h1 className="text-xl md:text-2xl font-bold mb-2 text-center md:text-left">Tailored For You</h1>
+          <h2 className="text-base md:text-lg text-BtnOrange font-semibold mb-2 text-center md:text-left">
+            We look forward to customising a system to meet your needs.
           </h2>
-          <p>
+          <p className="text-center md:text-left">
             We don’t favour one manufacturer over another – the only thing we do
             favour is making sure our customers get the right product that suits
             their needs and listening preferences. We will ask many questions in

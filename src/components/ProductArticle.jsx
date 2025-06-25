@@ -13,7 +13,7 @@ export default function ProductArticle({ id, btnText, isProductsPage, stock, nam
     return (
         <NavLink to={`/produkter/${id}`} className="block transition-transform duration-200 hover:scale-105 hover:shadow-xl">
             <article className='grid grid-cols-2 items-center bg-white shadow-(--prodArticle) h-100 rounded-sm'>
-                {/* Compare button in top-right corner */}
+   
                 {isProductsPage && (
                     <button className="col-2 flex gap-2 justify-end mt-2 text-black px-2 py-1 rounded">
                         Compare <IoGitCompareOutline />
@@ -25,7 +25,7 @@ export default function ProductArticle({ id, btnText, isProductsPage, stock, nam
                 <p className='mb-6 col-span-2 justify-self-center'>{description}</p>
                 <p className='text-2xl mb-2 col-span-2 justify-self-center'>{price} kr</p>
 
-                {/* Stock information next to the button */}
+      
                 <div className="flex justify-center mb-6 gap-2 col-span-2">
                     <Button to="/products:id" color='Orange' className="col-1" id="linkButton" text={btnText}>
                     </Button>

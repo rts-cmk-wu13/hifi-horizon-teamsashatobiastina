@@ -74,6 +74,9 @@ export default function Faq() {
 
                 </article>
             </section >
+               <div className="block md:hidden  ">
+                    <FooterNav />
+                  </div>
         </>
     )
 }
