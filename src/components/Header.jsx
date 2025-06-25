@@ -2,12 +2,14 @@ import { useState } from "react";
 import { FaSearch, FaShoppingCart, FaUser, FaAlignJustify } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import { useAuth } from "../contexts/Authcontext";
 
 export default function Header() {
   const [query, setQuery] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+    const { user } = useAuth(); 
 
   const handleInput = (e) => setQuery(e.target.value);
 
@@ -20,7 +22,18 @@ export default function Header() {
     }
   };
 
+
+
+  const handleProfileClick = () => {
+    if (user) {
+      navigate("/profile");
+    } else {
+      navigate("/login", { state: { from: { pathname: "/profile" } } });
+    }
+  };
+
   return (
+
     <div className="bg-white text-black md:bg-black md:text-white px-2 py-4 sm:px-8 sm:py-6">
       <nav className="flex flex-col sm:flex-row justify-between items-center font-light text-xs gap-4 sm:gap-0">
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 w-full relative">
@@ -57,6 +70,7 @@ export default function Header() {
                 <a href="#" className="text-[#8a6d3b] hover:underline py-1 text-lg">Tube Amplifiers</a>
               </div>
             </li>
+
             <li className="cursor-pointer hover:underline">
               <NavLink to="/about">About Us</NavLink>
             </li>
@@ -76,6 +90,7 @@ export default function Header() {
   
         <div className="hidden md:flex items-center gap-4 sm:gap-10 w-full sm:w-auto justify-end">
           <form onSubmit={handleSubmit} className="flex items-center space-x-2 w-full max-w-xs">
+
             <label htmlFor="product" className="flex items-center cursor-pointer">
               <FaSearch />
             </label>
@@ -83,15 +98,19 @@ export default function Header() {
               type="search"
               id="product"
               name="q"
+
               className="px-2 py-1 text-black bg-white rounded w-full"
+
               placeholder="Search a product"
               value={query}
               onChange={handleInput}
             />
           </form>
+
           <div className="flex gap-3">
-            <FaUser className="cursor-pointer" size={20} />
-            <div className="relative cursor-pointer">
+            <FaUser className="cursor-pointer" size={20} onClick={handleProfileClick} />
+            <div className="relative cursor-pointer mr-10">
+
               <FaShoppingCart size={20} />
             </div>
           </div>

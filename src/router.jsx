@@ -12,6 +12,9 @@ import Contact from "./pages/Contact.jsx";
 import Tak from "./pages/Tak.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Signup from "./pages/Signup.jsx";
+import Profile from "./pages/Profile.jsx";
+
+import RequireAuth from "./components/RequireAuth.jsx";
 
 // import Header from './components/header.jsx'
 // import Home from './pages/Home.jsx'
@@ -43,7 +46,15 @@ const router = createBrowserRouter([
         path: "login",
         element: <Login />
       },
-        {
+      {
+        path: "profile",
+        element: (
+        <RequireAuth>  
+        <Profile />
+        </RequireAuth>  
+      ),
+      },
+      {
         path: "signup",
         element: <Signup />
       },

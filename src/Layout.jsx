@@ -12,7 +12,8 @@ function Layout() {
   return (
     <>
 <Header />
-<main className="bg-BgSlightGrey  pb-20">
+<main className=' bg-BgSlightGrey pb-10 pt-8'>
+
   <Outlet />
 </main>
 
