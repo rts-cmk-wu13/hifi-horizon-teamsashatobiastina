@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Sorting from "../components/Sorting";
 import ProductArticle from "../components/ProductArticle";
 import { useAuth } from "../contexts/Authcontext";
+import FooterNav from "../components/FooterNav";
 
 
 export default function List() {
@@ -73,19 +74,32 @@ export default function List() {
   return (
     <>
 
-      <section className="grid grid-cols-4 p-12 bg-BgSlightGrey gap-x-8">
-        <h2 className="col-span-4 text-7xl text-BtnDarkerGrey font-bold mb-10 uppercase">
+      <section className="grid grid-cols-1 md:grid-cols-4 p-4 md:p-12 bg-BgSlightGrey gap-x-0 md:gap-x-8">
+        <h2 className="col-span-1 md:col-span-4 text-3xl md:text-7xl text-BtnDarkerGrey font-bold mb-6 md:mb-10 uppercase">
           Products
         </h2>
-        <div>
+
+
+        <div className="block md:hidden col-span-1 mb-4">
           <Sorting
             filterProduct={filterProduct}
             activeCategories={activeCategories}
             products={products}
           />
         </div>
-        <div className="col-span-3">
-          <ul className="grid grid-cols-3 gap-6">
+
+    
+        <div className="hidden md:block md:col-span-1">
+          <Sorting
+            filterProduct={filterProduct}
+            activeCategories={activeCategories}
+            products={products}
+          />
+        </div>
+
+ 
+        <div className="col-span-1 md:col-span-3">
+          <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {filteredProducts.map((product) => (
               <li key={product.id}>
                 <ProductArticle
@@ -103,6 +117,9 @@ export default function List() {
           </ul>
         </div>
       </section>
+        <div className="block md:hidden  ">
+              <FooterNav />
+            </div>
     </>
   );
 }
