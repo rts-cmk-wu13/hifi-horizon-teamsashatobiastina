@@ -47,26 +47,26 @@ export default function FooterNav() {
         <div className="fixed  w-1/2 right-0 bottom-15 z-[60] flex flex-col items-center gap-12 bg-black text-white py-4 shadow-lg">
              <NavLink
             to="/" 
-            className="py-2 w-full text-center hover:bg-gray-100"
+            className="py-2 w-full text-center  hover:text-BtnOrange"
             onClick={() => setShowMenu(false)}
           > <img className="flex justify-self-center" src="public/logo_sml 1.svg" alt="" /></NavLink>
           <NavLink
             to="/produkter"
-            className="py-2 w-full text-center hover:bg-gray-100"
+            className="py-2 w-full text-center  hover:text-BtnOrange"
             onClick={() => setShowMenu(false)}
           >
             Shop
           </NavLink>
           <NavLink
             to="/about"
-            className="py-2 w-full text-center hover:bg-gray-100"
+            className="py-2 w-full text-center  hover:text-BtnOrange"
             onClick={() => setShowMenu(false)}
           >
             About Us
           </NavLink>
           <NavLink
             to="/contact"
-            className="py-2 w-full text-center hover:bg-gray-100 pb-25"
+            className="py-2 w-full text-center  hover:text-BtnOrange pb-25"
             onClick={() => setShowMenu(false)}
           >
             Contact Us

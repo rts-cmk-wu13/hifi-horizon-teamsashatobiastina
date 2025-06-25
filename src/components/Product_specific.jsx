@@ -19,7 +19,7 @@ export default function Specific() {
         <h1>Product specifications</h1>
       </div>
       <div className="overflow-x-auto px-2 sm:px-0">
-        <table className="table-auto w-auto max-w-xs sm:max-w-lg mx-auto text-center border-separate border-spacing-0 min-w-[220px]">
+        <table className="table-auto  sm:w-4/10 w-auto max-w-xs sm:max-w-lg mx-auto text-center border-separate border-spacing-0 min-w-[220px]">
           <tbody className="divide-y divide-x divide-gray-200">
             {Object.entries(specs).map(([key, value]) => (
               <tr key={key} className="odd:bg-BtnLightGrey even:bg-gray-100">
