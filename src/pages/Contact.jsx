@@ -1,4 +1,4 @@
-import ContactForm from "../components/Form.jsx";
+import ContactForm from "../components/ContactForm.jsx";
 import FooterNav from "../components/FooterNav.jsx";
 export default function ContactPage() {
   return (
