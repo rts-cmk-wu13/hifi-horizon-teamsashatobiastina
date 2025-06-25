@@ -22,12 +22,7 @@ export default function List() {
   }, [location.search]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/products", {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
+    fetch("http://localhost:4000/products")
       .then((response) => response.json())
       .then((result) => {
         setProducts(result);
