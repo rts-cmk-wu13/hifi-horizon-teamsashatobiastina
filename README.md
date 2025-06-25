@@ -1,7 +1,9 @@
 # **Projektopgave HI-FI Horizon**
 
 ## Database
-https://hifihorizon-db.onrender.com/
+
+https://github.com/makulatorn/HifiHorizon-DB
+
 
 ## Om opgaven
 Denne opgave omhandler opsætning, navigation og hentning af data. Læs hele opgavebeskrivelsen grundigt igennem inden I stiller spørgsmål.
