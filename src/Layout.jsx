@@ -12,11 +12,13 @@ function Layout() {
   return (
     <>
 <Header />
-<main className=' bg-BgSlightGrey pb-10'>
+<main className="bg-BgSlightGrey  pb-20">
   <Outlet />
 </main>
 
-<Footer />
+<div className="hidden md:block">
+  <Footer />
+</div>
 
     </>
   )
